@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Meta para configurar apariencia pwa -->
+    <!-- color barra de estado en android -->
+    <meta name="theme-color" content="#41b883"/>
+    <!-- decir al navegador que es responsive -->
+    <meta name="MobileOptimized" content="width"/>
+    <!-- Desarroollo amigable para móviles -->
+    <meta name="HandheldFriendly" content="true"/>
+
+    <!-- Modificar barra de estado para iOS -->
+    <!-- permitir modificar la barra de estado en iOS -->
+    <meta name="apple-mobile-app-capable" content="yes"/>
+    <!-- clores de la barra de estado default:blanco, black:obscuro, black-translucent:color al azar de acuerdo contenido de la página -->
+    <meta name="apple-mobile-app-status-bar-style" content="black-translucent"/>
+
+
+    <!-- íconos -->
+    <link rel="shortcut icon" href="./img/icon16.png" type="image/png">
+    <!-- ícono donde se pulsa para abrir la app -->
+    <link rel="apple-touch-icon" href="./img/icon16.png">
+    <!-- imagen del splash -->
+    <link rel="apple-touch-startup-image" href="./img/icon16.png">
+
+    <!-- Manifiesto: archivo de configuraciones -->
+    <link rel="manifest" href="./manifest.json">
+
+    <title>Contador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app" class="app">
+        <h1 class="title">{{title}}</h1>
+        <hr>
+        <h3 class="count">{{count}}</h3>
+        <div class="buttons">
+            <button @click="modcount('', 3)"> - 1</button>
+            <button @click="modcount('add', 3)"> + 1</button>
+        </div>
+    </div>
+    <script src="./load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mount.js"></script>
+</body>
+</html>
